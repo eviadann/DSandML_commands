@@ -29,6 +29,7 @@
 [**pandas.crosstab**](https://pandas.pydata.org/docs/reference/api/pandas.crosstab.html#pandas.crosstab) - Вычислите простую перекрестную таблицу двух (или более) факторов.  
 [**pandas.Series**](https://pandas.pydata.org/docs/reference/api/pandas.Series.html#pandas.Series) - Одномерный массив с метками осей (включая временные ряды).  
 [**pandas.DataFrame**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame) - Двумерные, изменяемые по размеру, потенциально неоднородные табличные данные.  
+[**pandas.DataFrame.apply**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html#pandas.DataFrame.apply) - Примените функцию вдоль оси фрейма данных.  
 [**pandas.DataFrame.info**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.info.html#pandas.DataFrame.info) - Распечатать краткое описание DataFrame.  
 [**pandas.DataFrame.corr**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.corr.html#pandas.DataFrame.corr) - Вычислить попарную корреляцию столбцов, исключая значения NA/null.  
 [**pandas.DataFrame.describe**]() - Создание описательной статистики. Описательная статистика включает в себя статистику, обобщающую центральную тенденцию, дисперсию и форму распределения набора данных, за исключением значений NaN.  
