@@ -30,6 +30,7 @@
 [**pandas.Series**](https://pandas.pydata.org/docs/reference/api/pandas.Series.html#pandas.Series) - Одномерный массив с метками осей (включая временные ряды).  
 [**pandas.DataFrame**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame) - Двумерные, изменяемые по размеру, потенциально неоднородные табличные данные.  
 [**pandas.DataFrame.apply**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html#pandas.DataFrame.apply) - Примените функцию вдоль оси фрейма данных.  
+[**pandas.DataFrame.fillna**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.fillna.html#pandas.DataFrame.fillna) - Заполните значения NA/NaN, используя указанный метод.  
 [**pandas.DataFrame.info**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.info.html#pandas.DataFrame.info) - Распечатать краткое описание DataFrame.  
 [**pandas.DataFrame.corr**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.corr.html#pandas.DataFrame.corr) - Вычислить попарную корреляцию столбцов, исключая значения NA/null.  
 [**pandas.DataFrame.describe**]() - Создание описательной статистики. Описательная статистика включает в себя статистику, обобщающую центральную тенденцию, дисперсию и форму распределения набора данных, за исключением значений NaN.  
@@ -91,13 +92,37 @@
 ## scikit-learn
 (ver. 1.5.2)
 
-### scikit-learn.preprocessing.OneHotEncoder
+### scikit-learn.preprocessing.OneHotEncoder  
+Данный тип кодирования, основывается на создании бинарных признаков, которые показывают принадлежность к уникальному значению.  
 
 [**fit_transform**](https://scikit-learn.org/1.5/modules/generated/sklearn.preprocessing.OneHotEncoder.html#sklearn.preprocessing.OneHotEncoder.fit_transform) - Подгоните данные под себя, а затем преобразуйте их.  
 
-### scikit-learn.preprocessing.LabelEncoder
+### scikit-learn.preprocessing.LabelEncoder  
+Данный тип представляет собой однозначное соответствие число и уникальное значение.
+Первое значение кодируется нулем, второе единицей, и так далее.  
 
 [**fit_transform**](https://scikit-learn.org/1.5/modules/generated/sklearn.preprocessing.LabelEncoder.html#sklearn.preprocessing.LabelEncoder.fit_transform) - Установите кодировщик меток и верните закодированные метки.  
+
+### sklearn.preprocessing.MinMaxScaler  
+Из каждого значения признака, MinMaxScaler вычитает минимальное значение признака и делит на диапазон. MinMaxScaler сохраняет форму исходного распределения. Он не меняет содержательно информацию содержащуюся в исходных данных. Диапазон значений после признака находится между 0 и 1. Если хотите легкого преобразования, используйте его.  
+
+[**fit_transform**](https://scikit-learn.org/1.5/modules/generated/sklearn.preprocessing.MinMaxScaler.html#sklearn.preprocessing.MinMaxScaler.fit_transform) - Подгоните данные под себя, а затем преобразуйте их.  
+
+### sklearn.preprocessing.RobustScaler  
+RobustScaler преобразует вектор признака вычитая медиану и деля на межквартильный размах.
+Используйте RobustScaler если вы хотите уменьшить эффект от выбросов по сравнению с MinMaxScaler.  
+
+[**fit_transform**](https://scikit-learn.org/1.5/modules/generated/sklearn.preprocessing.RobustScaler.html#sklearn.preprocessing.RobustScaler.fit_transform) - Подгоните данные под себя, а затем преобразуйте их.  
+
+### sklearn.preprocessing.StandardScaler  
+StandardScaler стандартизирует признак вычитая среднее и затем масштабируя к единичной дисперсии. В результате применения StandardScaler мы получаем распределение со стандартным отклонением равным 1.  
+
+[**fit_transform**](https://scikit-learn.org/1.5/modules/generated/sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler.fit_transform) - Подгоните данные под себя, а затем преобразуйте их.  
+
+### sklearn.preprocessing.Normalizer
+Normalizer работает на строках, не на столбцах и к каждому наблюдению применяет L2 нормализацию, чтобы значения в строке имели единичную норму. Normalizer преобразует все признаки в значения между -1 и 1.  
+
+[**fit_transform**](https://scikit-learn.org/1.5/modules/generated/sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler.fit_transform) - Подгоните данные под себя, а затем преобразуйте их.  
 
 ### sklearn.model_selection
 
