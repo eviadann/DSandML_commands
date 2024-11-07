@@ -8,9 +8,16 @@
 5. [scikit-learn](#scikit-learn)  
 5.1. [scikit-learn.preprocessing.OneHotEncoder](#scikit-learnpreprocessingonehotencoder)  
 5.2. [scikit-learn.preprocessing.LabelEncoder](#scikit-learnpreprocessinglabelencoder)  
+5.3. [scikit-learn.preprocessing.MinMaxScaler](#sklearnpreprocessingminmaxscaler)  
+5.4. [scikit-learn.preprocessing.RobustScaler](#sklearnpreprocessingrobustscaler)  
+5.5. [scikit-learn.preprocessing.StandardScaler](#sklearnpreprocessingstandardscaler)  
+5.6. [scikit-learn.preprocessing.Normalizer](#sklearnpreprocessingnormalizer)  
+5.7. [scikit-learn.model_selection](#sklearnmodel_selection)  
+5.8. [scikit-learn.metrics](#sklearnmetrics)  
 
 ## Numpy  
 (ver 2.1)  
+
 [**numpy.arange**](https://numpy.org/doc/stable/reference/generated/numpy.arange.html#numpy-arange) - Возвращает равномерно распределенные значения в пределах заданного интервала.  
 [**numpy.dot**](https://numpy.org/doc/stable/reference/generated/numpy.dot.html#numpy.dot) - умножение матриц  
 [**numpy.clip**](https://numpy.org/doc/stable/reference/generated/numpy.clip.html#numpy.clip) - Обрезайте значения в массиве. При заданном интервале значения за пределами интервала обрезаются до краев интервала. Например, если задан интервал [0, 1], значения, меньшие 0, становятся равными 0, а значения, большие 1, становятся равны 1.  
@@ -20,14 +27,19 @@
 ### Numpy.Random  
 [**numpy.random.choice**](https://numpy.org/doc/stable/reference/random/generated/numpy.random.choice.html#numpy.random.choice) - Генерирует случайную выборку из заданного одномерного массива.  
 [**numpy.random.permutation**](https://numpy.org/doc/stable/reference/random/generated/numpy.random.permutation.html#numpy.random.permutation) - Произвольно переставляет последовательность или возвращает измененный диапазон.  
-[**numpy.random.randint**](https://numpy.org/doc/stable/reference/random/generated/numpy.random.randint.html#numpy.random.randint) - Возвращает случайные целые числа от наименьшего (включительно) до наибольшего (исключая).  
+[**numpy.random.randint**](https://numpy.org/doc/stable/reference/random/generated/numpy.random.randint.html#numpy.random.randint) - Возвращает случайные целые числа от наименьшего (включительно) до наибольшего
 
 
 ## Pandas  
 (ver 2.2)  
+
 [**pandas.read_csv**](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html#pandas.read_csv) - Считать файл значений, разделенных запятыми (csv), в DataFrame.  
 [**pandas.crosstab**](https://pandas.pydata.org/docs/reference/api/pandas.crosstab.html#pandas.crosstab) - Вычислите простую перекрестную таблицу двух (или более) факторов.  
+[**pandas.concat**](https://pandas.pydata.org/docs/reference/api/pandas.concat.html#pandas.concat) - Объединить объекты pandas вдоль определенной оси.  
+[**pandas.get_dummies**](https://pandas.pydata.org/docs/reference/api/pandas.get_dummies.html#pandas.get_dummies) - Преобразовать категориальную переменную в фиктивные/индикационные переменные.  
+[**pandas.date_range**](https://pandas.pydata.org/docs/reference/api/pandas.date_range.html#pandas.date_range) - Возвращает фиксированную частоту DatetimeIndex.  
 [**pandas.Series**](https://pandas.pydata.org/docs/reference/api/pandas.Series.html#pandas.Series) - Одномерный массив с метками осей (включая временные ряды).  
+[**pandas.Series.str.extract**](https://pandas.pydata.org/docs/reference/api/pandas.Series.str.extract.html#pandas.Series.str.extract) - Извлечь группы захвата в шаблоне регулярного выражения в виде столбцов в DataFrame.  
 [**pandas.DataFrame**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame) - Двумерные, изменяемые по размеру, потенциально неоднородные табличные данные.  
 [**pandas.DataFrame.apply**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html#pandas.DataFrame.apply) - Примените функцию вдоль оси фрейма данных.  
 [**pandas.DataFrame.fillna**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.fillna.html#pandas.DataFrame.fillna) - Заполните значения NA/NaN, используя указанный метод.  
@@ -42,7 +54,6 @@
 [**pandas.DataFrame.shape**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.shape.html) - Возвращает кортеж, представляющий размерность DataFrame.  
 [**pandas.DataFrame.isna**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.isna.html#pandas.DataFrame.isna) - Обнаружение пропущенных значений.  
 [**pandas.DataFrame.columns**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.columns.html#pandas.DataFrame.columns) - Метки столбцов DataFrame.  
-[**pandas.Series.str.extract**](https://pandas.pydata.org/docs/reference/api/pandas.Series.str.extract.html#pandas.Series.str.extract) - Извлечь группы захвата в шаблоне регулярного выражения в виде столбцов в DataFrame.  
 [**pandas.DataFrame.loc**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html#pandas.DataFrame.loc) - Доступ к группе строк и столбцов по меткам или логическому массиву.  
 [**pandas.DataFrame.iloc**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iloc.html#pandas.DataFrame.iloc) - Индексация на основе чисто целочисленного местоположения для выбора по позиции. `.iloc[]` is primarily integer position based (from 0 to length-1 of the axis), but may also be used with a boolean array.  
 [**pandas.DataFrame.value_counts**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.value_counts.html#pandas.DataFrame.value_counts) - Возвращает ряд, содержащий частоту каждой отдельной строки в Dataframe.  
@@ -54,14 +65,22 @@
 [**pandas.DataFrame.replace**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.replace.html#pandas.DataFrame.replace) - Заменить значения, указанные в to_replace, на значение  
 [**pandas.DataFrame.groupby**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html#pandas.DataFrame.groupby) - Группируйте DataFrame с помощью картографа или по серии столбцов.  
 [**pandas.DataFrame.select_dtypes**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.select_dtypes.html) - Возвращает подмножество столбцов DataFrame на основе dtypes столбцов.  
-[**pandas.concat**](https://pandas.pydata.org/docs/reference/api/pandas.concat.html#pandas.concat) - Объединить объекты pandas вдоль определенной оси.  
-[**pandas.get_dummies**](https://pandas.pydata.org/docs/reference/api/pandas.get_dummies.html#pandas.get_dummies) - Преобразовать категориальную переменную в фиктивные/индикационные переменные.  
 [**pandas.DataFrame.nlargest**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.nlargest.html) - Верните первые n строк, упорядоченных по столбцам в порядке убывания.  
+[**pandas.DataFrame.sort_values**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sort_values.html#pandas.DataFrame.sort_values) - Сортировать по значениям по любой из осей.  
+[**pandas.DataFrame.join**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.join.html#pandas.DataFrame.join) - Объединение столбцов другого DataFrame.  
+[**pandas.DataFrame.rename**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rename.html#pandas.DataFrame.rename) - Переименуйте столбцы или метки индекса  
+[**pandas.DataFrame.set_index**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index) - Задайте индекс DataFrame, используя существующие столбцы.  
+[**pandas.DataFrame.std**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.std.html#pandas.DataFrame.std) - Возвращает стандартное отклонение выборки по запрошенной оси.  
+[**pandas.DataFrame.describe**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.describe.html#pandas.DataFrame.describe) - Создание описательной статистики.  
+[**pandas.Index.append**](https://pandas.pydata.org/docs/reference/api/pandas.Index.append.html#pandas.Index.append) - Объедините коллекцию параметров индекса.  
+[**pandas.DataFrame.isin**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.isin.html#pandas.DataFrame.isin) - Содержится ли каждый элемент в DataFrame в значениях.  
+
 
 
 
 ## Matplotlib  
 (ver. 3.4.3)  
+
 ### Matplotlib.Pyplot
 [**matplotlib.pyplot.figure**](https://matplotlib.org/3.4.3/api/_as_gen/matplotlib.pyplot.figure.html?highlight=figure#matplotlib.pyplot.figure) - Создайте новый график или активируйте существующий.  
 [**matplotlib.pyplot.plot**](https://matplotlib.org/3.4.3/api/_as_gen/matplotlib.pyplot.plot.html?highlight=plot#matplotlib.pyplot.plot) - Постройте график зависимости y от x в виде линий и/или маркеров.  
