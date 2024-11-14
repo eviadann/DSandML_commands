@@ -74,6 +74,7 @@
 [**pandas.DataFrame.describe**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.describe.html#pandas.DataFrame.describe) - Создание описательной статистики.  
 [**pandas.Index.append**](https://pandas.pydata.org/docs/reference/api/pandas.Index.append.html#pandas.Index.append) - Объедините коллекцию параметров индекса.  
 [**pandas.DataFrame.isin**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.isin.html#pandas.DataFrame.isin) - Содержится ли каждый элемент в DataFrame в значениях.  
+[**pandas.DataFrame.nunique**](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.nunique.html#pandas.DataFrame.nunique) - Подсчитайте количество уникальных элементов на указанной оси.  
 
 
 
