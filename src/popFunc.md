@@ -112,12 +112,12 @@
 ## scikit-learn
 (ver. 1.5.2)
 
-### scikit-learn.preprocessing.OneHotEncoder  
+### sklearn.preprocessing.OneHotEncoder  
 Данный тип кодирования, основывается на создании бинарных признаков, которые показывают принадлежность к уникальному значению.  
 
 [**fit_transform**](https://scikit-learn.org/1.5/modules/generated/sklearn.preprocessing.OneHotEncoder.html#sklearn.preprocessing.OneHotEncoder.fit_transform) - Подгоните данные под себя, а затем преобразуйте их.  
 
-### scikit-learn.preprocessing.LabelEncoder  
+### sklearn.preprocessing.LabelEncoder  
 Данный тип представляет собой однозначное соответствие число и уникальное значение.
 Первое значение кодируется нулем, второе единицей, и так далее.  
 
